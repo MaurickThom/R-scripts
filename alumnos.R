@@ -17,11 +17,11 @@ mean(mean(column.note))
 View(table)
 attach(table)
 names(table)
-plot(`Edad` ~ `Nota`,main="Diagrama de dispercion entre las variables\n poblacion de V.E.S y el clima de LIMA SUR",xlab="CLIMA LIMA SUR",ylab="POBLACION V.E.S")
-abline(lm(`POBLACION-VILLA-EL-SALVADOR` ~ `CLIMA-LIMA-SUR`))
+plot(`Edad` ~ `Nota`,main="Diagrama de dispercion entre las variables\n Edad y nota",xlab="edad",ylab="nota")
+abline(lm(`Edad` ~ `Nota`))
 
 
-newData <- data.frame(column.poblacionVES, column.climaLimaSur)
+newData <- data.frame(column.age, column.note)
 cor(newData)
 
 View(table)
