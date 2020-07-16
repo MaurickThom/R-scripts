@@ -3,6 +3,7 @@ library(readxl)
 # leer excel ???
 # https://rpubs.com/osoramirez/93049
 # https://bookdown.org/jboscomendoza/r-principiantes4/graficas-de-barras.html
+# https://www.youtube.com/watch?v=zAzpuLJA29U
 
 table <- read_excel("C:\\Users\\User\\Desktop\\informe\\alumnos.xlsx",sheet="Reporte")
 column.age <- as.vector(table$`Edad`)
@@ -30,3 +31,10 @@ newData <- data.frame(column.age, column.note)
 cor(newData)
 
 View(table)
+
+hist(x = table$Edad, main = "Histograma de Edad", 
+     xlab = "Edad", ylab = "Frecuencia",
+     col = "purple")
+
+barplot(table(table$Edad))
+
